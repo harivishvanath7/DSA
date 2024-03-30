@@ -1,6 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+
 void selSort(int arr[], int n){
 
 	int i,j, min_index;
