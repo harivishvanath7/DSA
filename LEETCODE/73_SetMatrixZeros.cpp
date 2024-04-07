@@ -1,26 +1,21 @@
-#include <iostream>
-#include <vector>
+#include<bits/stdc++.h>
+using namespace std;
 
-const int ROWS = 3;
-const int COLS = 3;
+int main()
+{
+       int f[100];
+       f[0] = 1;
+       f[1] = 1;
 
-int main() {
-    std::vector<std::vector<int>> matrix(ROWS, std::vector<int>(COLS));
+       int n;
+       cin >> n;
 
-    // Initializing the matrix
-    for (int i = 0; i < ROWS; ++i) {
-        for (int j = 0; j < COLS; ++j) {
-            matrix[i][j] = i * COLS + j + 1;
-        }
-    }
+       for (int i = 2 ; i < n; i++) {
+               f[i] = f[i-1] + f[i-2];
+       }
 
-    // Accessing elements of the matrix
-    for (int i = 0; i < ROWS; ++i) {
-        for (int j = 0; j < COLS; ++j) {
-            std::cout << matrix[i][j] << " ";
-        }
-        std::cout << std::endl;
-    }
+       for (int i = 0 ; i < n; i++) {
+               cout << f[i] << " ";
+       }
 
-    return 0;
 }
