@@ -1,23 +1,27 @@
-#include <bits/stdc++.h>
+#include <iostream>
 using namespace std;
 
 int main(){
 
     int n;
+    cout << "Enter the Size : ";
     cin >> n;
 
-    int i = 1;
-    int count = 1;
-
-    while(i<=n){
-        int j = 1;
-        while(j<=n){
-            cout << count << " ";
-            count++;
-            j++;
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 1; j <= n; j++)
+        {
+            cout << j << " ";
         }
         cout << endl;
-        i++;
     }
-    return 0;
+    
 }
+
+/*
+        1 2 3 4 5 
+        1 2 3 4 5
+        1 2 3 4 5
+        1 2 3 4 5
+        1 2 3 4 5
+*/
