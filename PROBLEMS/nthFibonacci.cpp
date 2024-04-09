@@ -4,6 +4,7 @@ using namespace std;
 int main()
 {
        int f[100];
+
        f[0] = 1;
        f[1] = 1;
 
