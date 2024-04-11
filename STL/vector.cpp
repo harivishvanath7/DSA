@@ -8,11 +8,14 @@ int main(){
     v.push_back(1);
     v.push_back(2);
     v.push_back(3);
+    v.push_back(2);
+    v.push_back(3);
     
     cout << "Vector Traversing : " << endl;
     for(int i:v){
         cout << i << " ";
     }
+    cout << endl;
 
     cout << "The capacity of Vector : " << v.capacity() << endl;
     cout << "The size of Vector : " << v.size() << endl;
@@ -30,7 +33,15 @@ int main(){
     }
     cout << endl;
 
-    v.pop_back();
+    if (!v.empty()) {
+        v.erase(v.begin()); // Erases the element at the beginning
+    }   
+
+    if (!v.empty()) {
+        v.erase(v.begin() + 1); // Erases the 2nd element 
+    }  
+
+    v.pop_back();  // Erases the last element 
 
     cout << "The Vector after popping : ";
 
