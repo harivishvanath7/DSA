@@ -7,7 +7,7 @@ void rotateArray(int arr[], int n, int k) {
         temp[(i+k)%n] = arr[i];
     }
     for(int i = 0; i < n; i++) {
-        cout << temp[i] << " ";
+        arr[i] = temp[i];
     }
 }
 
