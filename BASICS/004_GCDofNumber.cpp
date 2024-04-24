@@ -1,37 +1,26 @@
-#include <bits/stdc++.h>
+#include <iostream>
 using namespace std;
 
-int main(){
+int main() {
+    int numbers[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+    int target = 6;
 
-    int a, b;
-    cout << "Enter the two Numbers : ";
-    cin >> a >> b;
-
-    int n = min(a,b);
-
-    int ans;
-
-    for (int i = 1; i <= n; i++)
-    {
-        if (a % i == 0 && b % i == 0)
-        {
-            ans = i;
+    // Using 'break' to exit the loop early when the target is found
+    for (int num : numbers) {
+        if (num == target) {
+            cout << "Target found: " << target << endl;
+            break; // Exit the loop immediately
         }
+        cout << "Checking: " << num << endl;
     }
 
-    cout << "The GCD of " << a << " and " << b << " is : " << ans;
-
-    return 0;    
-}
-
-
-/*
-    USING EUCLIDEAN METHOD :-
-
-        int gcd(int a, int b) {
-            if (b == 0) {
-                return a;
-            }
-            return gcd(b, a % b);
+    // Using 'continue' to skip specific elements
+    for (int num : numbers) {
+        if (num % 2 == 0) {
+            continue; // Skip even numbers
         }
-*/
+        cout << "Odd number: " << num << endl;
+    }
+
+    return 0;
+}
