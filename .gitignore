@@ -1,2 +1,8 @@
-.vscode/
+# Ignore temporary code runner files
+tempCodeRunnerFile.cpp
+
+# Ignore all executable files
 *.exe
+
+# Ignore the .vscode folder
+.vscode/
