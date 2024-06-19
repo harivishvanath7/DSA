@@ -1,5 +1,5 @@
 # Ignore temporary code runner files
-*tempCodeRunnerFile.cpp
+**/tempCodeRunnerFile.cpp
 
 # Ignore all executable files
 *.exe
