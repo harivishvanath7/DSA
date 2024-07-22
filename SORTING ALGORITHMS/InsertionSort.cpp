@@ -1,28 +1,25 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-void bubbleSort(int arr[], int n){
-    for (int i = n-1; i >= 1; i--)
+void insertionSort(int arr[], int n){
+    for (int i = 0; i <= n-1; i++)
     {
-        int didSwap = 0; // Optimizing code for O(n^2) to O(n)
-        for (int j = 0; j <= i-1; j++)
+        int j = i;
+        while (j > 0 && arr[j-1] > arr[j])   // j > 0 coz, if not it'll consider -1th index
         {
-            if(arr[j]>arr[j+1]){
-                swap(arr[j+1], arr[j]);
-                didSwap = 1;
-            }
+            swap(arr[j-1], arr[j]);
+            j--;
         }
-        if (didSwap == 0) break;
     }
-    
 
-    // Printing the Array
+    // Print the Array
+    cout << "The Sorted Array : "; 
     for (int k = 0; k < n; k++)
     {
         cout << arr[k] << " ";
     }
     
-    
+
 }
 
 int main(){
@@ -38,7 +35,7 @@ int main(){
         cin >> arr[i];
     }
 
-    bubbleSort(arr, n);
+    insertionSort(arr, n);
     
     return 0;
 }

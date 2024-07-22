@@ -1,29 +1,34 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-void selectionSort(int arr[], int n) {
-    int min;
+void selectionSort(int arr[], int n){
 
-    for (int i = 0; i < n - 1; i++) { 
-        min = i;
-        for (int j = i + 1; j < n; j++) { 
-            if (arr[j] < arr[min]) {
+    for (int i = 0; i <= n-2; i++)
+    {
+        int min = i;
+        for (int j = i; j <= n-1; j++)
+        {
+            if (arr[j]<arr[min])
+            {
                 min = j;
             }
         }
-        swap(arr[i], arr[min]);
+        swap(arr[min], arr[i]);
     }
-
-    for (int i = 0; i < n; i++) {
-        cout << arr[i] << " ";
+    
+    // Print the Array
+    cout << "The Sorted Array : "; 
+    for (int k = 0; k < n; k++)
+    {
+        cout << arr[k] << " ";
     }
-    cout << endl;
+    
+    
 }
 
-int main() {
+int main(){
     int n;
-
-    cout << "Enter the size of array : ";
+    cout << "Enter the size of the array : ";
     cin >> n;
 
     int arr[n];
@@ -33,8 +38,8 @@ int main() {
     {
         cin >> arr[i];
     }
-    
-    selectionSort(arr, n); 
 
+    selectionSort(arr, n);
+    
     return 0;
 }
