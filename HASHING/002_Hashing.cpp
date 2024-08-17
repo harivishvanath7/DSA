@@ -25,7 +25,7 @@ int main(){
     
 
     int q;
-    cout << "Enter the query : ";
+    cout << "Enter the no. of queries : ";
     cin >> q;
 
     while (q--)
