@@ -8,9 +8,19 @@ void leftRotByOne(int arr[], int n){
         arr[i-1] = arr[i];
     }
     arr[n-1] = temp;
-
-    
 }
+
+void rightRotByOne(int arr[], int n) {    
+    int last = arr[n-1]; // Store the last element
+    
+    for (int i = n-1; i > 0; i--){
+        arr[i] = arr[i-1]; // Shift elements to the right
+    }
+    
+    arr[0] = last; // Place the last element at the beginning
+}
+
+
 
 int main(){
 
@@ -32,7 +42,7 @@ int main(){
     }
     cout << "\n";
 
-    leftRotByOne(arr, n);
+    rightRotByOne(arr, n);
 
     cout << "After Rotation : \n";
     for (int i = 0; i < n; i++)
