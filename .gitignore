@@ -6,3 +6,5 @@
 
 # Ignore the .vscode folder
 .vscode/
+
+*.class
